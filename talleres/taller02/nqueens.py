@@ -1,10 +1,5 @@
-
-
 def permutaciones(cadena):
       permutacionesAux(cadena,"")
-
-
-
 
 
 def permutacionesAux(pregunta, respuesta):
