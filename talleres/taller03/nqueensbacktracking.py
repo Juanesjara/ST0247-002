@@ -1,13 +1,13 @@
 def seAtacanHastaI(tablero, i):
-    for j in range(0,i+1):
-        for k in range(j+1,i+1):
-            if abs(tablero[j]-tablero[k]) == abs(j-k) or tablero[j]==tablero[k]:
-                return True
-            return False
-
-def nreinas(n:int):
-    nreinasAUX(n,0,[0]*n)
+  for j in range(0,i+1):
+    for k in range(j+1,i+1):
+        if abs(tablero[j]-tablero[k]) == abs(j-k) or tablero[j]==tablero[k]:
+          return True
+  return False
     
+def nreinas(n:int):
+  lista = nreinasAUX(n,0,[0]*n)
+  return lista
 def nreinasAUX(n:int,c:int,t:list):
   if n == c:
     print(t) 
@@ -22,6 +22,6 @@ def nreinasAUX(n:int,c:int,t:list):
 
 def main():
  nreinas(4)
-
-
+ 
+ 
 main()
