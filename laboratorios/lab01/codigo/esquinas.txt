@@ -1,0 +1,16 @@
+1000 1 10.0 Calle 1
+1000 3 14.0 desconocido
+1000 4 10.0 desconocido
+1 1000 10.0 Calle 2a
+1 2 7.0 desconocido
+1 3 12.0 desconocido
+1 4 15.0 desconocido
+2 1 7.0 desconocido
+2 3 20.0 desconocido
+3 1000 14.0 desconocido
+3 1 12.0 desconocido
+3 2 20.0 desconocido
+3 4 8.0 desconocido
+4 1000 10.0 desconocido
+4 1 15.0 desconocido
+4 3 8.0 desconocido
