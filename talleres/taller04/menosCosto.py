@@ -23,6 +23,9 @@ class GraphAL:
             if i[0] == destination:
                 peso = i[1]
         return peso
+    
+    
+      
     def getSuccessors(self, source):
         lista = []
         arreglo = self.arregloDeListas[source]
