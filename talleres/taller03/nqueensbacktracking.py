@@ -17,11 +17,8 @@ def nreinasAUX(n:int,c:int,t:list):
       if seAtacanHastaI(t,c):
         pass
       else:
-
         nreinasAUX(n,c+1,t)
 
 def main():
- nreinas(4)
- 
- 
+  nreinas(4)
 main()
