@@ -54,7 +54,10 @@ def permutaciones(cadena, lista:list):
 
 def permutacionesAux(pregunta, respuesta, lista:list):
     if len(pregunta)==len(respuesta):
-        lista.append(respuesta)
+        
+        final = respuesta + respuesta[0]
+        
+        lista.append(final)
         return
     else:
       for i in range(0,len(pregunta)):
@@ -68,12 +71,10 @@ def grafoAString(g):
     
 def HayCaminoHamiltoniano(g,inicio, final):
     siguientes = g.getSuccessors(int(inicio))
-    for i in siguientes:
-        
-        if int(final) == int(i):
-            return True
-        else:
-            return False
+    if int(final) in g.getSuccessors(int(inicio)):
+        return True
+    else: return False
+    
     
 
 
@@ -83,25 +84,46 @@ def fuerzaBruta(g):
     permutaciones(stringGrafo, listaPermutaciones)
     listaPermutacionesConCamino = []
     for j in listaPermutaciones:
-        print(j)
         resultado = True
         for i in range (len(j)):
             if int(i) == int(len(j))-1:
-                resultado = HayCaminoHamiltoniano(g,j[i],j[0])
+                #resultado = HayCaminoHamiltoniano(g,j[i],j[0])
                 print("acabe de comparar",j[i],j[0],"resultado", resultado)
-                #print(resultado, "aqui compruebo el ultimo y el primero")
+                print(resultado, "aqui compruebo el ultimo y el primero")
             else:
                 resultado = HayCaminoHamiltoniano(g,j[i],j[i+1])
-                print("acabe de comparar",j[i],j[i+1],"resultado", resultado)
+                #print("acabe de comparar",j[i],j[i+1],"resultado", resultado)
                 #print(resultado, "aqui")
             if resultado == False:
-                print("me rompi")
+                #print("me rompi")
                 break
             else:
                 continue
         if resultado == True:
             listaPermutacionesConCamino.append(j)
-          
+    print(listaPermutacionesConCamino) 
+    arcMenor = ""
+    pesoMax = 100000000000000000000 
+    for j in listaPermutacionesConCamino:
+        pesoAcum = 0
+        for i in range(len(j)):
+            if int(i) == int(len(j))-1:
+                pesoAcum += g.getWeight((int(j[i])),(int(j[0])))
+            else: 
+                pesoAcum += g.getWeight((int(j[i])),(int(j[i+1])))
+        if pesoAcum < pesoMax:
+            pesoMax = pesoAcum
+            arcMenor = j
+    print("El camino con menos peso es:")
+    for x in range (len(arcMenor)):
+        if x < len(arcMenor)-1:
+            print(arcMenor[x], "->", end=" ")
+        else: 
+            print(arcMenor[x])
+    print(arcMenor)
+            
+    print("Con un peso de", pesoMax)
+                
          
 def main():
     size = 3
@@ -113,7 +135,7 @@ def main():
     g.addArc(2,0,2)
     g.addArc(2,1,1)
     fuerzaBruta(g)
-    
+   
 
 
 main()
