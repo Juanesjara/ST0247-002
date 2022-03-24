@@ -33,7 +33,7 @@ def nreinasAux(n, combinaciones):
   permutaciones(cadena)
 
 def main():
-  nreinas(8)
+  nreinas(4)
 
   
 main()

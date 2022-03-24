@@ -23,4 +23,6 @@ class GraphAm:
                 respuesta.append(j)
             return respuesta
     def __str__(self):
+        
+    def
 

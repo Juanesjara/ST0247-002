@@ -60,7 +60,7 @@ def main():
     g.addArc(3,0,2)
     g.addArc(3,4,3) 
     g.addArc(1,3,2)
-    print(costoDelMasCorto(g,1,3))
+    print(costoDelMasCorto(g,1,2))
     
 main()
     
