@@ -57,11 +57,6 @@ def cicloHamiltonianoCostoMinimo(g, o):
     print(arcMenosCostoso)
     return
 
-
-
-
-
-
 def main():
     size = 5
     g = GraphAL(size)

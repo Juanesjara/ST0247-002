@@ -120,7 +120,7 @@ def fuerzaBruta(g):
             print(arcMenor[x], "->", end=" ")
         else: 
             print(arcMenor[x])
-    print(arcMenor)
+    
             
     print("Con un peso de", pesoMax)
                 
@@ -134,8 +134,7 @@ def main():
     g.addArc(1,2,1)
     g.addArc(2,0,2)
     g.addArc(2,1,1)
+    
     fuerzaBruta(g)
    
-
-
 main()

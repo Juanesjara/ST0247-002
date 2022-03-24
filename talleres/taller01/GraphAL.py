@@ -14,12 +14,12 @@ class GraphAL:
     def getSuccessors(self, vertice):
     	for i in range(0,vertice):
        		successors = self.arregloDeListas
-		return successors
+		  return successors
 
     def getWeight(self, source, destination):
     	for i in range(0,destination):
         	wight = self.arregloDeListas
-		return weight
+		  return weight
 
     def __str__(self):
 
