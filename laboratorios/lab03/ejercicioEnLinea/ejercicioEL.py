@@ -60,17 +60,7 @@ def caminoMasCorto(grafo, verticeFinal):
         if verticeCandidato == verticeFinal: break
     return camino
 
-def main():
-    # vertices = 5
-    # cantArcos = 6
-
-    # grafo = GraphAL(vertices)
-    # grafo.addArc(1,2,2)
-    # grafo.addArc(2,3,4)
-    # grafo.addArc(1,4,1)
-    # grafo.addArc(4,3,3)
-
-    #print(grafo.getSuccessors(5))    
+def main(): 
     str1 = input("")
     vertices = int(str1[0:1])
     grafo = GraphAL(vertices)
